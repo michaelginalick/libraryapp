@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
   root 'user#index'
+
+  resources :admin
+  post '/dashboard/admin_login' => 'dashboard#admin_login'
+  get '/dashboard/admin_logout' => 'dashboard#admin_logout'
 
   resources :user
   #sessions routes

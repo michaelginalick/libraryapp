@@ -20,7 +20,6 @@ class UserController < ApplicationController
       redirect_to user_path(@user.id)
     else
       redirect_to root_url
-
     end
   end
 

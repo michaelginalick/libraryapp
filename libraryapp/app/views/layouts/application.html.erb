@@ -10,6 +10,10 @@
         <a href="/session/logout"><p>Logout</p></a>
     <%end%>
 
+    <% if admin_logged_in? %>
+        <a href="/dashboard/admin_logout"><p>Logout</p></a>
+    <% end %>
+
     <%= yield %>
 
 </body>
