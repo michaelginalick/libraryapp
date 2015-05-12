@@ -5,7 +5,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :title
       t.string :author
       t.string :genre
-      t.boolean :checked_out?
+      t.boolean :checked_out?, :default => false
 
       t.timestamps
     end
