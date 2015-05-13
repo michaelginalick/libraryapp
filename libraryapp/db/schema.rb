@@ -32,8 +32,8 @@ ActiveRecord::Schema.define(version: 20150512015855) do
   create_table "checkouts", force: true do |t|
     t.integer  "user_id"
     t.integer  "book_id"
-    t.datetime "start_date"
-    t.datetime "due_date"
+    t.date     "start_date"
+    t.date     "due_date"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
