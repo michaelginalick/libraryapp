@@ -4,8 +4,8 @@ class CreateCheckouts < ActiveRecord::Migration
 
       t.integer     :user_id
       t.integer     :book_id
-      t.datetime    :start_date
-      t.datetime    :due_date
+      t.date        :start_date
+      t.date        :due_date
 
       t.timestamps
     end
