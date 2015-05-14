@@ -2,6 +2,14 @@ class AdminController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
 
+# as an admin
+  # I want to be able to add a book
+  # I want to be able to edit a book
+  # I want to be able to delete a book
+  # I want to be able to view all users checkouts
+  # I want to be able to view the status of any book ie whose it checked out by, due date
+
+
   def index
     if session[:admin_id] != nil
       redirect_to admin_path(Admin.find(session[:admin_id]))

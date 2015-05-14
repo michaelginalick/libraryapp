@@ -3,6 +3,16 @@ class UserController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
 
+  #As a user I want to
+  #to be able to view all books
+  #to be able to search for books
+  #to be able to view an individual book
+  #to be able to checkout a book
+  #to be able to checkin a book
+
+
+
+
   def index
     if session[:user_id] != nil
       redirect_to user_path(User.find(session[:user_id]))
