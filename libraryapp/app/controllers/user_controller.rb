@@ -10,9 +10,6 @@ class UserController < ApplicationController
   #to be able to checkout a book
   #to be able to checkin a book
 
-
-
-
   def index
     if session[:user_id] != nil
       redirect_to user_path(User.find(session[:user_id]))
@@ -35,6 +32,7 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(session[:user_id])
+    @books = Book.all
   end
 
   def new

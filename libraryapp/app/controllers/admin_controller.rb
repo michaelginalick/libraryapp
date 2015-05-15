@@ -32,6 +32,7 @@ class AdminController < ApplicationController
 
   def show
     @admin = Admin.find(session[:admin_id])
+    @books = Book.all
   end
 
   def new
