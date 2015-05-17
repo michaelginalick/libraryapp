@@ -36,11 +36,10 @@
 
 }
 
-.signupbutton{
-    margin-top: 7%;
+.pricing-table{
+    display: inline;
+    float: left;
 }
-
-
 
 .top-nav h1 {
     text-align: left;
