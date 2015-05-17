@@ -16,6 +16,11 @@ Rails.application.routes.draw do
   post '/session/login' => 'session#login'
   get '/session/logout' => 'session#logout', :as => 'logout'
 
+  resources :book
+  get '/book/id' => 'book#one_book'
+  post 'book/new_book' => 'book#new_book'
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
