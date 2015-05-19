@@ -12,6 +12,16 @@
  <%= image_tag("book.jpg")%>
 </div>
 
+
+
 <div class="checkout_button">
-	<a href="#" class="button radius">Radius Button</a>
+	<%= form_for(:checkout, :url => {:controller => 'checkout', :action => 'new_checkout'}) do |f|%>
+		<%=%>
+		<%=%>
+		<% flash.each do |name, msg| %>
+        	<%= content_tag :div, msg, class: name %>
+        <% end %>
+        <button class="button button-block"/>Checkout</button>
+    <% end %>
+    </form>
 </div>

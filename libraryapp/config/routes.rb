@@ -21,8 +21,9 @@ Rails.application.routes.draw do
   post 'book/new_book' => 'book#new_book'
 
   resources :checkout
+  post '/checkout/new_checkout' => 'checkout#new_checkout'
 
-  post '/user/id/book/id' => 'checkout#book'
+ 
 
 
   # Example of regular route:
