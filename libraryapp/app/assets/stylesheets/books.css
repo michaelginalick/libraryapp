@@ -1,0 +1,40 @@
+/*// Place all the styles related to the Books controller here.*/
+/*// They will automatically be included in application.css.*/
+/*// You can use Sass (SCSS) here: http://sass-lang.com/*/
+
+
+.book {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}
+
+.one_book {
+
+  max-width: 260px;
+  max-height: 342px;
+  position: absolute;
+  top: 245px;
+  left: 30px;
+
+}
+
+.user_name {
+    position: relative;
+    height: 50px;
+    width: 210px;
+    top: 30px;
+    left: 0px;
+    text-align: center;
+
+}
+
+.checkout_button{
+	position: relative;
+	margin-top: 156px;
+	padding-left: 30px;
+}

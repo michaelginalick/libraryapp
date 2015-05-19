@@ -1,1 +1,18 @@
 <p>Hello, <%=current_user.username%></p>
+
+
+
+    <% @books.each do |book| %>
+      <div class="pricing-table" ></div>
+        <ul class="pricing-table">
+          <li class="title"> <%=book.title %>    </li>
+          <li class="price"> <%=book.author %>   </li>
+          <li class="description"> <%=book.genre %>  </li>
+          <li class="bullet-item"> <p>Checkout status:</p> <%= book.checked_out? %>    </li>
+          <li class="cta-button"><a class="button" <%= link_to 'Book Details', book_id_path(@book) %> </a></li>
+          </ul>
+    <% end %>
+
+
+
+   
