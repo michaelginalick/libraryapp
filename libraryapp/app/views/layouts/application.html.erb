@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 </head>
 <body>
+  <div class="logout">
 
     <% if logged_in? %>
         <a href="/session/logout"><p>Logout</p></a>
@@ -13,8 +14,10 @@
     <% if admin_logged_in? %>
         <a href="/dashboard/admin_logout"><p>Logout</p></a>
     <% end %>
+    </div>
 
     <%= yield %>
+
 
 </body>
 </html>

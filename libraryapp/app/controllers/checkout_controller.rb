@@ -1,3 +1,9 @@
 class CheckoutController < ApplicationController
-  #needs to be able to add checkout
+  
+	def book
+		
+	end
+
+
+
 end

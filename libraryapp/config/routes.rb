@@ -20,6 +20,10 @@ Rails.application.routes.draw do
   get '/book/id' => 'book#one_book'
   post 'book/new_book' => 'book#new_book'
 
+  resources :checkout
+
+  post '/user/id/book/id' => 'checkout#book'
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

@@ -1,1 +1,17 @@
-show.html.erb
+<div class="user_name">
+  <%= @user.email %>
+</div>
+
+<div>
+  <h1> <%= @book.title %> </h1>
+  <h2> <%= @book.author %> </h2><br>
+  <h3> <%= @book.genre %> </h3><br>
+</div>
+
+<div class="one_book">
+ <%= image_tag("book.jpg")%>
+</div>
+
+<div class="checkout_button">
+	<a href="#" class="button radius">Radius Button</a>
+</div>
