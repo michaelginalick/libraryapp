@@ -53,10 +53,6 @@ class AdminController < ApplicationController
     @book = Book.create(params[:book])
   end
 
-  def one_book
-
-  end
-
 
   private
 
