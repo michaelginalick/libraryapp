@@ -33,6 +33,7 @@ class UserController < ApplicationController
   def show
     @user = User.find(session[:user_id])
     @books = Book.all
+    @user_checkouts = @user.checkouts
   end
 
   def new

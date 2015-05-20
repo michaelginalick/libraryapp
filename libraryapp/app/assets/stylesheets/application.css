@@ -39,6 +39,7 @@
 .pricing-table{
     display: inline;
     float: left;
+    margin-top: 55px;
 }
 
 .top-nav h1 {

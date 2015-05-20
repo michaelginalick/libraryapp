@@ -3,8 +3,9 @@ class BookController < ApplicationController
   #book needs full crud functionality via the admin, not the user
 
   def show
+    puts "I am here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     @user = User.find(session[:user_id])
-    @book = Book.find_by(params[:id])
+    @book = Book.find(params[:id])
   end
 
   def update
@@ -22,7 +23,7 @@ class BookController < ApplicationController
   end
 
   def one_book
-    @book = Book.find(params[:id])
+    @book = Book.find_by(params[:id])
   end
 
   private
