@@ -13,14 +13,17 @@
 </div>
 
 
-<div class="dropdown_show">
- <a data-dropdown="drop1" class="button"aria-controls="drop1" aria-expanded="false">Your Books</a>
- <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-  <li><a href="#">This is a link</a></li>
-  <li><a href="#">This is another</a></li>
-  <li><a href="#">Yet another</a></li>
-</ul>
-</div>  
+<% @user_checkouts.each do |checkout| %>
+  <div class="dropdown">
+  <a data-dropdown="drop1" class="button success"aria-controls="drop1" aria-expanded="false">Your Books</a>
+  <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+    <%= link_to book_path do %>
+      <strong><%= checkout.book.title %></strong> -- <span>View Details</span>
+    <% end %>
+  </ul>
+  </div>  
+<%end%>
+
 
 
 

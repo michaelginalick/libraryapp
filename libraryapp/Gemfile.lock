@@ -70,6 +70,7 @@ GEM
     foundation-rails (5.4.5.0)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
+    highline (1.7.2)
     hike (1.2.3)
     i18n (0.7.0)
     jasmine-core (2.3.2)
@@ -93,6 +94,9 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.6.2)
     minitest (5.6.1)
+    mturk (1.8.1)
+      highline (>= 1.2.7)
+      nokogiri (>= 1.4)
     multi_json (1.11.0)
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
@@ -141,6 +145,9 @@ GEM
       rspec-core (~> 2.14.0)
       rspec-expectations (~> 2.14.0)
       rspec-mocks (~> 2.14.0)
+    ruby-aaws (0.7.0)
+    ruby-aws (1.7.2)
+      mturk (>= 1.8.0)
     rubyzip (1.1.7)
     sass (3.2.19)
     sass-rails (4.0.5)
@@ -218,6 +225,8 @@ DEPENDENCIES
   rails (= 4.1.5)
   rails_12factor
   rspec-rails (~> 2.14.1)
+  ruby-aaws
+  ruby-aws
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver

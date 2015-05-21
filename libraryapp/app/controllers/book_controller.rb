@@ -3,9 +3,9 @@ class BookController < ApplicationController
   #book needs full crud functionality via the admin, not the user
 
   def show
-    puts "I am here!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     @user = User.find(session[:user_id])
     @book = Book.find(params[:id])
+    @user_checkouts = @user.checkouts
   end
 
   def update
