@@ -2,15 +2,17 @@
   <%= @user.email %>
 </div>
 
-<div>
-  <h1> <%= @book.title %> </h1>
-  <h2> <%= @book.author %> </h2><br>
-  <h3> <%= @book.genre %> </h3><br>
+<div class ="book_details">
+  <h5> <%= @book.title %> </h5>
+  <h5> <%= @book.author %> </h5>
+  <h5> <%= @book.genre %> </h5>
+  <h5> <%= start_date %> </h5>
+  <h5> <%= due_date %> </h5>
 </div>
 
-<div class="one_book">
+<!-- <div class="one_book">
  <%= image_tag("book.jpg")%>
-</div>
+</div> -->
 
 
 <% @user_checkouts.each do |checkout| %>
@@ -30,17 +32,13 @@
 
 
 <div class="checkout_button">
-	<%= form_for(:checkout, :url => {:controller => 'checkout', :action => 'new_checkout'}) do |f|%>
-		<%=%>
-		<%=%>
+	
 		<% flash.each do |name, msg| %>
         	<%= content_tag :div, msg, class: name %>
         <% end %>
         <% if @book.checked_out? == true %>
         	<button class="button button-block"  disabled />This book is currently checked out</button>
         <%else%>
-        	<button class="button button-block"/>Checkout</button>
+        	<button class="button button-block"/>Checkout<%= link_to "Checkout",checkout_path %></button>
         <%end%>	
-    <% end %>
-    </form>
 </div>

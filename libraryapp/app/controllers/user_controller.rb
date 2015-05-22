@@ -34,6 +34,7 @@ class UserController < ApplicationController
     @user = User.find(session[:user_id])
     @books = Book.all
     @user_checkouts = @user.checkouts
+    p @user_checkouts
   end
 
   def new
