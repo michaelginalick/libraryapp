@@ -1,11 +1,13 @@
 class CheckoutController < ApplicationController
   
 	def new_checkout
+        p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
 		@user = User.find_by(session[:user_id])
     	@book = Book.find_by(params[:id])
     	@checkout = Checkout.create(:user_id => @user.id, :book_id => @book.id)
 
     	if @checkout.save
+            p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
             @checkout.update(checked_out?: true)
     		respond_to do |format|
     		  format.html {redirect_to user_path(session[:user_id])}
