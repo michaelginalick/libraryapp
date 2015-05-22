@@ -6,7 +6,7 @@ class CheckoutController < ApplicationController
     	@checkout = Checkout.create(:user_id => @user.id, :book_id => @book.id)
 
     	if @checkout.save
-            @checkout.update(checked_out?: true)
+            @book.update(checked_out?: true)
     		respond_to do |format|
     		  format.html {redirect_to user_path(session[:user_id])}
     	    end
@@ -18,6 +18,13 @@ class CheckoutController < ApplicationController
 
     def show
         redirect_to()
+    end
+
+
+    private
+
+    def checkout_params
+        params.require(:checkout).permit(:user_id, :book_id, :start_date, :due_date)
     end
 
 end
