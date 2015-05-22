@@ -35,6 +35,17 @@
 
 .checkout_button{
 	position: relative;
-	margin-top: 156px;
+	margin-top: 320px;
 	padding-left: 30px;
+  padding-right: 30px;
+}
+
+.book_details{
+  position: relative;
+    height: 50px;
+    width: 350px;
+    top: 50px;
+    left: 0px;
+    text-align: center;
+
 }
