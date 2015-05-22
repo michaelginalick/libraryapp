@@ -1,8 +1,14 @@
 class CheckoutController < ApplicationController
   
+<<<<<<< HEAD
     def create
     end
        
+=======
+	def create
+    end
+	   
+>>>>>>> 1124b146843f03d07c56feb89ee6f2e3ec2ec816
 
     def show
         @user = User.find(session[:user_id])

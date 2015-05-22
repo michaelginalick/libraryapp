@@ -17,7 +17,7 @@
   book4 = Book.create(title: "The Naked and the Dead", author: "Norman Mailer", genre: "fiction", checked_out?: false)
   book5 = Book.create(title: "Libra", author: "Don Dello", genre: "fiction", checked_out?: false)
 
-  checkout = Checkout.create(user_id: 1, book_id: 1, start_date: "4/12/2014", due_date: "5/12/2014")
-  checkout1 = Checkout.create(user_id: 2, book_id: 2, start_date: "4/12/2014", due_date: "5/12/2014")
-  checkout2 = Checkout.create(user_id: 3, book_id: 3, start_date: "4/12/2014", due_date: "5/12/2014")
-  checkout3 = Checkout.create(user_id: 1, book_id: 3, start_date: "4/12/2014", due_date: "5/12/2014")
+  #checkout = Checkout.create(user_id: 1, book_id: 1, start_date: "4/12/2014", due_date: "5/12/2014")
+  #checkout1 = Checkout.create(user_id: 2, book_id: 2, start_date: "4/12/2014", due_date: "5/12/2014")
+  #checkout2 = Checkout.create(user_id: 3, book_id: 3, start_date: "4/12/2014", due_date: "5/12/2014")
+  #checkout3 = Checkout.create(user_id: 1, book_id: 3, start_date: "4/12/2014", due_date: "5/12/2014")
