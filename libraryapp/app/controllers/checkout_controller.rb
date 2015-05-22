@@ -1,20 +1,9 @@
+require 'book_helper'
 class CheckoutController < ApplicationController
-  
-<<<<<<< HEAD
-    def create
-    end
-       
-=======
-	def create
-    end
-	   
->>>>>>> 1124b146843f03d07c56feb89ee6f2e3ec2ec816
 
     def show
         @user = User.find(session[:user_id])
-        p @user
         @book = Book.find(params[:id])
-        p @book
         @checkout = Checkout.create(:user_id => @user.id, :book_id => @book.id)
         if @checkout.save
             @book.update(checked_out?: true)
