@@ -8,7 +8,7 @@ class UserController < ApplicationController
   #to be able to search for books
   #to be able to view an individual book
   #to be able to checkout a book
-  #to be able to checkin a book
+  #to be able to checkin a book I have checked out
 
   def index
     if session[:user_id] != nil

@@ -12,12 +12,4 @@
 </ul>
 <% end %>
 
-<div class="dropdown">
-    <a href="#" class="button success" data-options="align:left" data-dropdown="drop">Your Books &raquo;</a>
-      <ul id="drop" class="large f-dropdown" data-dropdown-content>
-       <% @user_checkouts.each do |checkout| %>
-          <li><%= link_to 'View Details', book_path(checkout.book) %><strong><%= checkout.book.title %></strong></li>
-       <%end%>
-      </ul>
-</div>
 

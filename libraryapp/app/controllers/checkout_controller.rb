@@ -1,9 +1,5 @@
+require 'book_helper'
 class CheckoutController < ApplicationController
-
-  
-	def create
-    end
-	   
 
     def show
         @user = User.find(session[:user_id])
