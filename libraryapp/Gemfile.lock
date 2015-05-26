@@ -218,10 +218,6 @@ DEPENDENCIES
   rails (= 4.1.5)
   rails_12factor
   rspec-rails (~> 2.14.1)
-<<<<<<< HEAD
-  ruby-aaws
-=======
->>>>>>> 1124b146843f03d07c56feb89ee6f2e3ec2ec816
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   selenium-webdriver
