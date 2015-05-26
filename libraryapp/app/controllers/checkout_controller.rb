@@ -3,9 +3,7 @@ class CheckoutController < ApplicationController
 
     def show
         @user = User.find(session[:user_id])
-        p @user
         @book = Book.find(params[:id])
-        p @book
         @checkout = Checkout.create(:user_id => @user.id, :book_id => @book.id, :start_date => start_date, :due_date => due_date)
         if @checkout.save
             @book.update(checked_out?: true)

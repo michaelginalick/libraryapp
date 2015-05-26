@@ -2,15 +2,15 @@
 
 
 
-<% @books.each do |book| %>
-<ul class="pricing-table">
-  <li class="title"> <%=book.title %>    </li>
-  <li class="price"> <%=book.author %>   </li>
-  <li class="description"> <%=book.genre %>  </li>
-  <li class="bullet-item"> <p>Checkout status:</p> <%= book.checked_out? %>    </li>
-  <li class="cta-button"><a class="button" <%= link_to 'Book Details', book_path(book) %> </a></li>
-</ul>
-<% end %>
+
+
+
+<div id="books">
+  <%= render @books %>
+</div>
+
+<%= will_paginate @books %>
+
 
 <div class="dropdown">
   <a data-dropdown="drop1" class="button success" aria-controls="drop1" aria-expanded="false">Your Books</a>
@@ -20,3 +20,4 @@
          <%end%>
   </ul>
 </div>
+
