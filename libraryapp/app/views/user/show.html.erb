@@ -12,18 +12,12 @@
 </ul>
 <% end %>
 
-
-<% @user_checkouts.each do |checkout| %>
-  <div class="dropdown">
-  <a data-dropdown="drop1" class="button success"aria-controls="drop1" aria-expanded="false">Your Books</a>
-  <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
-    <%= link_to book_path do %>
-      <strong><%= checkout.book.title %></strong> -- <span>View Details</span>
-    <% end %>
-  </ul>
-  </div>  
-<%end%>
-
-
-
+<div class="dropdown">
+    <a href="#" class="button success" data-options="align:left" data-dropdown="drop">Your Books &raquo;</a>
+      <ul id="drop" class="large f-dropdown" data-dropdown-content>
+       <% @user_checkouts.each do |checkout| %>
+          <li><%= link_to 'View Details', book_path(checkout.book) %><strong><%= checkout.book.title %></strong></li>
+       <%end%>
+      </ul>
+</div>
 
