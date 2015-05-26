@@ -1,11 +1,10 @@
 require 'book_helper'
 class CheckoutController < ApplicationController
 
-
     def show
         @user = User.find(session[:user_id])
         @book = Book.find(params[:id])
-        @checkout = Checkout.create(:user_id => @user.id, :book_id => @book.id)
+        @checkout = Checkout.create(:user_id => @user, :book_id => @book, :start_date => start_date, :due_date => due_date)
         if @checkout.save
             @book.update(checked_out?: true)
             respond_to do |format|
@@ -24,5 +23,7 @@ class CheckoutController < ApplicationController
     def checkout_params
         params.require(:checkout).permit(:user_id, :book_id, :start_date, :due_date)
     end
+
+   
 
 end

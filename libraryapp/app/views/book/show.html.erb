@@ -10,33 +10,22 @@
   <h5> <%= due_date %> </h5>
 </div>
 
-
-
 <div class="dropdown">
-    <a href="#" class="button success" data-dropdown="drop">Your Books &raquo;</a>
+    <a href="#" class="button success" data-options="align:left" data-dropdown="drop">Your Books &raquo;</a>
       <ul id="drop" class="large f-dropdown" data-dropdown-content>
        <% @user_checkouts.each do |checkout| %>
-          <li><strong><%= checkout.book.title %></strong> -- <span> View </span></li>
+          <li><%= link_to 'View Details', book_path(checkout.book) %><strong><%= checkout.book.title %></strong></li>
        <%end%>
       </ul>
 </div>
 
-
-
-
-
-
-
-
-
 <div class="checkout_button">
-	
 		<% flash.each do |name, msg| %>
         	<%= content_tag :div, msg, class: name %>
         <% end %>
         <% if @book.checked_out? == true %>
         	<button class="button button-block"  disabled />This book is currently checked out</button>
         <%else%>
-        	<button class="button button-block"/>Checkout<%= link_to "Checkout",checkout_path %></button>
+        	<button class="button button-block"/><%= link_to "Checkout",checkout_path %></button>
         <%end%>	
 </div>
