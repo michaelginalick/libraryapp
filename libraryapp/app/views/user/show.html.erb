@@ -1,15 +1,12 @@
 <p>Hello, <%=current_user.username%></p>
 
-
-
-
-
-
 <div id="books">
   <%= render @books %>
 </div>
 
-<%= will_paginate @books %>
+
+	<%= will_paginate @books %>
+
 
 
 <div class="dropdown">
