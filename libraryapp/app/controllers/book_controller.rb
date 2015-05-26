@@ -1,6 +1,11 @@
-class BookController < ApplicationController
+class BooksController < ApplicationController
 
   #book needs full crud functionality via the admin, not the user
+
+
+  def index
+     @books = Book.paginate(:page => params[:page], :per_page => 20)
+  end
 
   def show
     @user = User.find(session[:user_id])
