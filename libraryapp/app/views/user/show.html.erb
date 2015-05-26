@@ -12,4 +12,11 @@
 </ul>
 <% end %>
 
-
+<div class="dropdown">
+  <a data-dropdown="drop1" class="button success" aria-controls="drop1" aria-expanded="false">Your Books</a>
+  <ul id="drop1" class="f-dropdown" data-dropdown-content aria-hidden="true" tabindex="-1">
+     <% @user_checkouts.each do |checkout| %>
+            <li><%= link_to '', book_path(checkout.book) %><strong><%= checkout.book.title %></strong>--Details</li>
+         <%end%>
+  </ul>
+</div>
