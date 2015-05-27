@@ -30,9 +30,8 @@ class UserController < ApplicationController
 
   def show
     @user = User.find(session[:user_id])
-    @books = Book.paginate(:page => params[:page], :per_page => 20)
     @user_checkouts = @user.checkouts
-    
+    @books = Book.paginate(:page => params[:page], :per_page => 20)
   end
 
   def new
