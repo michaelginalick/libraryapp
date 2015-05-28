@@ -31,7 +31,19 @@ class UserController < ApplicationController
   def show
     @user = User.find(session[:user_id])
     @user_checkouts = @user.checkouts
-    @books = Book.paginate(:page => params[:page], :per_page => 20)
+    @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
+
+
+    # if request.xml_http_request?
+    #       render :partial => "_search", :layout => false
+    #  end
+
+      # respond_to do |format|
+      #   format.html 
+      #   format.js
+      # end
+
+
   end
 
   def new

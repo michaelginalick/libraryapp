@@ -9,7 +9,8 @@ class Book < ActiveRecord::Base
 		if search
 			where('title || author || genre LIKE ?', "%#{search}%")
 		else
-			scoped
+			all
 		end
 	end
+	
 end
