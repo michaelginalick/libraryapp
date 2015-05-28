@@ -4,13 +4,13 @@ class BooksController < ApplicationController
 
 
   def index
-     @books = Book.paginate(:page => params[:page], :per_page => 20)
+     @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
   end
 
   def show
-    @user = User.find(session[:user_id])
-    @book = Book.find(params[:id])
-    @user_checkouts = @user.checkouts
+    # @user = User.find(session[:user_id])
+    # @book = Book.find(params[:id])
+    # @user_checkouts = @user.checkouts
   end
 
   def update

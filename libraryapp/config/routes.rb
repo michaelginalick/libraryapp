@@ -17,8 +17,6 @@ Rails.application.routes.draw do
   get '/session/logout' => 'session#logout', :as => 'logout'
 
   resources :book
-  get '/book/id' => 'book#one_book'
-  post 'book/new_book' => 'book#new_book'
 
   resources :checkout
   post '/checkout/new_checkout' => 'checkout#new_checkout'
