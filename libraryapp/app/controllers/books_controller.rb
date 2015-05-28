@@ -8,9 +8,9 @@ class BooksController < ApplicationController
   end
 
   def show
-    # @user = User.find(session[:user_id])
-    # @book = Book.find(params[:id])
-    # @user_checkouts = @user.checkouts
+    @user = User.find(session[:user_id])
+    @book = Book.find(params[:id])
+    @user_checkouts = @user.checkouts
   end
 
   def update

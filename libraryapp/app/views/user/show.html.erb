@@ -5,7 +5,11 @@
  <!-- <input type="text" autofocus id="newTodoItem" placeholder="Search by Title, Author, Genre"></input> -->
 
 
+<<<<<<< HEAD
 <%= form_tag books_path, method: "get" do %>
+=======
+<%= form_tag user_path, method: "get" do %>
+>>>>>>> search_books
 	<%= text_field_tag :search, params[:search], :autofocus => true, :placeholder => "Search by Title, Author, Genre", :id => "bookSearch" %>
 <% end %>
 
