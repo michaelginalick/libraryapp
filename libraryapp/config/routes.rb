@@ -16,7 +16,7 @@ Rails.application.routes.draw do
   post '/session/login' => 'session#login'
   get '/session/logout' => 'session#logout', :as => 'logout'
 
-  resources :book
+  resources :books
 
   resources :checkout
   post '/checkout/new_checkout' => 'checkout#new_checkout'
