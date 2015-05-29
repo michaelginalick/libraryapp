@@ -11,9 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery_ujs
+//= requre autocomplete-rails
 //= require login
 //= require endless_scrolling
-//= require jquery_ujs
+//= require jquery-ui-1.8.2.custom.min.js
 //= require foundation
 //= require_tree .
 

@@ -12,7 +12,9 @@ class UserController < ApplicationController
 
   def index
     if session[:user_id] != nil
-      redirect_to user_path(User.find(session[:user_id]))
+      @user = User.find(session[:user_id])
+      @user_checkouts = @user.checkouts
+      @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
     else
       @user = User.new
     end
@@ -22,7 +24,7 @@ class UserController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
-      redirect_to user_path(@user.id)
+      redirect_to user_index_path(@user.id)
     else
       redirect_to root_url
     end
@@ -32,18 +34,6 @@ class UserController < ApplicationController
     @user = User.find(session[:user_id])
     @user_checkouts = @user.checkouts
     @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
-
-
-    # if request.xml_http_request?
-    #       render :partial => "_search", :layout => false
-    #  end
-
-      # respond_to do |format|
-      #   format.html 
-      #   format.js
-      # end
-
-
   end
 
   def new
