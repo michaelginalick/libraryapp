@@ -4,7 +4,9 @@ class BooksController < ApplicationController
 
 
   def index
+    @user = User.find(session[:user_id])
      @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
+     @user_checkouts = @user.checkouts
   end
 
   def show

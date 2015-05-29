@@ -5,7 +5,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-  root 'user#index'
+  root 'session#index'
 
   resources :admin
   post '/dashboard/admin_login' => 'dashboard#admin_login'
@@ -16,12 +16,12 @@ Rails.application.routes.draw do
   post '/session/login' => 'session#login'
   get '/session/logout' => 'session#logout', :as => 'logout'
 
-  resources :books
+ 
 
   resources :checkout
   post '/checkout/new_checkout' => 'checkout#new_checkout'
 
- 
+ resources :books
 
 
   # Example of regular route:

@@ -6,9 +6,8 @@
 
 
 
-
-<%= form_tag user_path, method: "get" do %>
-	<%= text_field_tag :search, params[:search], :autofocus => true, :placeholder => "Search by Title, Author, Genre", :id => "bookSearch" %>
+<%= form_tag books_path, method: "get" do %>
+  <%= text_field_tag :search, params[:search], :autofocus => true, :placeholder => "Search by Title, Author, Genre", :id => "bookSearch" %>
 <% end %>
 
 
