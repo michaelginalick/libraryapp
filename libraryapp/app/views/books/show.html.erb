@@ -7,23 +7,14 @@
   <h5> <%= @book.title %> </h5>
   <h5> <%= @book.author %> </h5>
   <h5> <%= @book.genre %> </h5>
-  <% @book_checkouts.each do |checkout|%>
-    <% if checkout.user_id == @user.id %>
-      <h5> <%= due_date %> </h5>
-    <%elsif @book.checked_out? %>
-      <h5>Not Available</h5>
-    <%else%>  
-      <h5> <%= start_date %> </h5>
-      <h5> <%= due_date %> </h5>
-    <%end%>
-  <%end%>    
+     
 </div>
 
 <div class="dropdown">
     <a href="#" class="button success" data-options="align:left" data-dropdown="drop">Your Books &raquo;</a>
       <ul id="drop" class="large f-dropdown" data-dropdown-content>
        <% @user_checkouts.each do |checkout| %>
-          <li><%= link_to 'View Details', book_path(checkout.book) %><strong><%= checkout.book.title %></strong></li>
+          <li><%= link_to 'View Details', book_path(checkout.id) %><strong><%= checkout.title %></strong></li>
        <%end%>
       </ul>
 </div>
@@ -32,18 +23,19 @@
 
 
 <div class="checkout_button">
-    <% flash.each do |name, msg| %>
-          <%= content_tag :div, msg, class: name %>
-    <% end %>
-    <% @book_checkouts.each do |checkout|%>
-      <% if checkout.user_id == @user.id %>
-        <button class="button button-block" /> <%= link_to "Checkin",checkin_path %></button>
+  <% if @user_checkouts.length > 0 %>
+   <% @user_checkouts.each do |checkout|%>
+      <% if checkout.id == @user.id %>
+        <button class="button button-block" /> <%= link_to "Checkin",checkin_path(@book) %></button>
       <%elsif @book.checked_out? %>
         <button class="button button-block"  disabled />This book is currently checked out</button>
       <%else%>
-        <button class="button button-block"  disabled />This book is currently checked out</button>
+        <button class="button button-block" /> <%= link_to "Checkin",checkout_path(@book) %></button>
       <%end%>
-    <%end%>   
+    <%end%> 
+  <%else%>
+    <button class="button button-block" /> <%= link_to "Checkout",checkout_path(@book) %></button>
+  <%end%>
 </div>
 
 
