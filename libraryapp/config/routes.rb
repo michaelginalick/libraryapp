@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   post '/checkout/new_checkout' => 'checkout#new_checkout'
 
  resources :books
+ resources :checkin
 
 
   # Example of regular route:
