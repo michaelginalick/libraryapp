@@ -7,8 +7,16 @@
   <h5> <%= @book.title %> </h5>
   <h5> <%= @book.author %> </h5>
   <h5> <%= @book.genre %> </h5>
-  <h5> <%= start_date %> </h5>
-  <h5> <%= due_date %> </h5>
+  <% @book_checkouts.each do |checkout|%>
+    <% if checkout.user_id == @user.id %>
+      <h5> <%= due_date %> </h5>
+    <%elsif @book.checked_out? %>
+      <h5>Not Available</h5>
+    <%else%>  
+      <h5> <%= start_date %> </h5>
+      <h5> <%= due_date %> </h5>
+    <%end%>
+  <%end%>    
 </div>
 
 <div class="dropdown">
@@ -20,13 +28,31 @@
       </ul>
 </div>
 
+
+
+
 <div class="checkout_button">
-		<% flash.each do |name, msg| %>
-        	<%= content_tag :div, msg, class: name %>
-        <% end %>
-        <% if @book.checked_out? == true %>
-        	<button class="button button-block"  disabled />This book is currently checked out</button>
-        <%else%>
-        	<button class="button button-block"/><%= link_to "Checkout",checkout_path %></button>
-        <%end%>	
+    <% flash.each do |name, msg| %>
+          <%= content_tag :div, msg, class: name %>
+    <% end %>
+    <% @book_checkouts.each do |checkout|%>
+      <% if checkout.user_id == @user.id %>
+        <button class="button button-block" /> <%= link_to "Checkin",checkin_path %></button>
+      <%elsif @book.checked_out? %>
+        <button class="button button-block"  disabled />This book is currently checked out</button>
+      <%else%>
+        <button class="button button-block"  disabled />This book is currently checked out</button>
+      <%end%>
+    <%end%>   
 </div>
+
+
+
+
+
+
+
+
+
+
+
