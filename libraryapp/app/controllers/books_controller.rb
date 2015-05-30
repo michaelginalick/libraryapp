@@ -12,7 +12,6 @@ class BooksController < ApplicationController
   def show
     @user = User.find(session[:user_id])
     @book = Book.find(params[:id])
-    #@book_checkouts = @book.checkouts
     @user_checkouts = @user.books.where(id: @book.id, checked_out?: true).limit(1)
   end
 
