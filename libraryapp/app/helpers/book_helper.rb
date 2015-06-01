@@ -12,12 +12,13 @@ module BookHelper
         return "The due date is: " + checkin_date
     end
 
+
     def show_dates
         @book_checkouts.each do |checkout|
             if (checkout.user_id == @user.id && @book.checked_out? == true)
                 return due_date
             else  
-                return start_date + due_date
+                return start_date + <br> + due_date
             end
         end 
     end
