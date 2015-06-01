@@ -6,6 +6,7 @@ class CreateBooks < ActiveRecord::Migration
       t.string :author
       t.string :genre
       t.boolean :checked_out?, :default => false
+      t.string :good_reads_id
 
 
       t.timestamps

@@ -24,7 +24,8 @@ ActiveRecord::Schema.define(version: 20150514030116) do
     t.string   "title"
     t.string   "author"
     t.string   "genre"
-    t.boolean  "checked_out?", default: false
+    t.boolean  "checked_out?",  default: false
+    t.string   "good_reads_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

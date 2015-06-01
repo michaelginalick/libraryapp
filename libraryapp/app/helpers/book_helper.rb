@@ -27,9 +27,9 @@ module BookHelper
 
 
 
-    def good_reads_data
+    def good_reads_data(book)
         client = Goodreads.new(api_key: 'dLe4w6mTCE44oYBGPDNg')
-        search = client.book(@book_id)
+        search = client.book(book)
         return  search.average_rating + " " + search.description
     end
 
