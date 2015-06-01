@@ -4,10 +4,10 @@
 
 
 <div class ="book_details">
-  <h5> <%= @book.title %> </h5>
+  <h5> <%= @book.title  %> </h5>
   <h5> <%= @book.author %> </h5>
-  <h5> <%= @book.genre %> </h5>
-  <%= show_dates %>  
+  <h5> <%= @book.genre  %> </h5>
+  <h5> <%= show_dates   %> </h5>
 </div>
 
 <div class="dropdown">
@@ -27,16 +27,12 @@
 
 
 <div class="checkout_button">
-  <% if @user_checkouts.length > 0 %>
-   <% @user_checkouts.each do |checkout|%>
-      <% if checkout.id == @user.id %>
+  <% if @book.checked_out? == true %>
+      <% if @user_checkouts.length > 0 %>
         <button class="button button-block" /> <%= link_to "Checkin",checkin_path(@book) %></button>
-      <%elsif @book.checked_out? %>
+      <%else %>
         <button class="button button-block"  disabled />This book is currently checked out</button>
-      <%else%>
-        <button class="button button-block" /> <%= link_to "Checkin",checkout_path(@book) %></button>
-      <%end%>
-    <%end%> 
+      <%end%> 
   <%else%>
     <button class="button button-block" /> <%= link_to "Checkout",checkout_path(@book) %></button>
   <%end%>

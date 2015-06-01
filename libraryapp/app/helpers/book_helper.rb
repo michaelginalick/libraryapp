@@ -14,19 +14,16 @@ module BookHelper
 
 
     def show_dates
-        @book_checkouts.each do |checkout|
-            if (checkout.user_id == @user.id && @book.checked_out? == true)
+        if @book.checked_out? == true
+            if @user_checkouts.length > 0
                 return due_date
-            else  
-                return start_date + <br> + due_date
-            end
-        end 
+            else
+                return "This book is currently checked out"
+            end    
+        else 
+            return start_date + " " + due_date
+        end  
     end
-
-
-
-
-	
 end
 
 
