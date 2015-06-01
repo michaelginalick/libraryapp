@@ -24,6 +24,16 @@ module BookHelper
             return start_date + " " + due_date
         end  
     end
+
+
+
+    def good_reads_data
+        client = Goodreads.new(api_key: 'dLe4w6mTCE44oYBGPDNg')
+        search = client.book(@book_id)
+        return  search.average_rating + " " + search.description
+    end
+
+
 end
 
 

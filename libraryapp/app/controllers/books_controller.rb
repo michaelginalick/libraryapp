@@ -1,3 +1,5 @@
+
+
 class BooksController < ApplicationController
 
   #book needs full crud functionality via the admin, not the user
@@ -13,7 +15,6 @@ class BooksController < ApplicationController
     @user = User.find(session[:user_id])
     @book = Book.find(params[:id])
     @user_checkouts = @user.books.where(id: @book.id, checked_out?: true).limit(1)
-    @book_checkouts = @book.checkouts.where(user_id: @user, book_id: @book).limit(1)
   end
 
   def update
