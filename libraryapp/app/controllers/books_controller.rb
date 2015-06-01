@@ -5,14 +5,15 @@ class BooksController < ApplicationController
 
   def index
     @user = User.find(session[:user_id])
-     @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
-     @user_checkouts = @user.books.where(checked_out?: true)
+    @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
+    @user_checkouts = @user.books.where(checked_out?: true)
   end
 
   def show
     @user = User.find(session[:user_id])
     @book = Book.find(params[:id])
     @user_checkouts = @user.books.where(id: @book.id, checked_out?: true).limit(1)
+    @book_checkouts = @book.checkouts.where(user_id: @user, book_id: @book).limit(1)
   end
 
   def update
