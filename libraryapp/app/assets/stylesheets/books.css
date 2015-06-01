@@ -57,6 +57,9 @@
 }
 
 .good_reads {
+  font-family: "Roboto";
+  font-size: 17px;
+  line-height: 26px;
   position: relative;
   margin-top: 250px;
   padding-left: 30px;
