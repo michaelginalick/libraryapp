@@ -1,3 +1,5 @@
+
+
 module BookHelper
 
 	def start_date
@@ -37,9 +39,6 @@ module BookHelper
 
     def formatted_string
         edit = @search.description.gsub(/(&amp)/, '')
-        edit.gsub(/(<em>)/, '')
-        #edit.gsub(/'(</em>)'/, '')
-
         return edit
     end
 

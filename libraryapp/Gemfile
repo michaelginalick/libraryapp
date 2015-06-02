@@ -33,9 +33,11 @@ gem 'factory'
 gem 'factory_girl','~>4.4.0'
 gem 'will_paginate', '~> 3.0.7'
 gem "non-stupid-digest-assets"
+gem 'whenever', :require => false
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'foundation-rails'
 gem 'goodreads'
+
 
 group :development, :test do
   gem 'shoulda-matchers', require: false

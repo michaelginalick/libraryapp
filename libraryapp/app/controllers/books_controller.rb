@@ -16,7 +16,7 @@ class BooksController < ApplicationController
     @user = User.find(session[:user_id])
     @book = Book.find(params[:id])
     @book_id = @book.good_reads_id
-    @user_checkouts = @user.books.where(id: @book.id, checked_out?: therue).limit(1)
+    @user_checkouts = @user.books.where(id: @book.id, checked_out?: true).limit(1)
   end
 
   def update
