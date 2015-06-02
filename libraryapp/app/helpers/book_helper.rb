@@ -30,19 +30,22 @@ module BookHelper
     def good_reads_data(book)
         client = Goodreads.new(api_key: 'dLe4w6mTCE44oYBGPDNg')
         @search = client.book(book)
+
         rating
-        edit = @search.description.gsub('/(&amp)/', '')
-        return  edit
+        formatted_string
+    end
+
+    def formatted_string
+        edit = @search.description.gsub(/(&amp)/, '')
+        edit.gsub(/(<em>)/, '')
+        #edit.gsub(/'(</em>)'/, '')
+
+        return edit
     end
 
     def rating
-         @search.average_rating 
+        return  @search.average_rating 
     end
-
-    def real_rating
-        return rating
-    end
-
 
 end
 
