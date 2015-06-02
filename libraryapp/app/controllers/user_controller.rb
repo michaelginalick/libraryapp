@@ -33,6 +33,7 @@ class UserController < ApplicationController
   def show
     @user = User.find(session[:user_id])
     @user_checkouts = @user.books.where(checked_out?: true).distinct
+    @user_checkout_history = @user.books.distinct
     @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
   end
 
