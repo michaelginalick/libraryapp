@@ -51,7 +51,7 @@ class SendText
 	      	client.account.messages.create(
 	      	 :from => from,
 	      	 :to => name[number],
-	      	 :body => "Hi, #{name}, #{book_title} is due today."
+	      	 :body => "Hi, #{name}, #{book_title[number]} is due today."
 	    )
 
 		end
