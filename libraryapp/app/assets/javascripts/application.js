@@ -12,7 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= requre autocomplete-rails
+//= require jquery.ui.all
 //= require login
 //= require endless_scrolling
 //= require jquery-ui-1.8.2.custom.min.js
