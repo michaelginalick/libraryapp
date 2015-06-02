@@ -16,7 +16,7 @@
 <div class="good_reads">
   
 <% good_reads_data(@book_id) %>
-<%= formatted_string %>
+<%= strip_tags(formatted_string) %>
 <br>
 <%= rating %>
 
