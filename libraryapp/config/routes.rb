@@ -10,6 +10,11 @@ Rails.application.routes.draw do
   resources :admin
   post '/dashboard/admin_login' => 'dashboard#admin_login'
   get '/dashboard/admin_logout' => 'dashboard#admin_logout'
+  get '/dashboard/admin_view/:book_id' => 'dashboard#admin_book_view', :as => 'admin_book_view'
+  patch '/dashboard/admin_update/:book_id' => 'dashboard#admin_book_update', :as => 'admin_book_update'
+
+
+
 
   resources :user
   #sessions routes

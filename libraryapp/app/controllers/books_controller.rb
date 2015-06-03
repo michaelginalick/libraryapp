@@ -19,24 +19,6 @@ class BooksController < ApplicationController
     @user_checkouts = @user.books.where(id: @book.id, checked_out?: true).limit(1)
   end
 
-  def update
-    @book = Book.find(params[:id])
-    @book.update(params[:book])
-  end
-
-  def delete
-    @book = Book.find(params[:id])
-    @book.destroy
-  end
-
-  def new_book
-    @book = Book.create(params[:book])
-  end
-
-  def one_book
-    @book = Book.find_by(params[:id])
-  end
-
   private
 
   def book_params

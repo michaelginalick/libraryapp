@@ -19,6 +19,23 @@ class DashboardController < ApplicationController
     redirect_to root_path
   end
 
+
+
+  def admin_book_view
+    @book = Book.find(params[:book_id])
+  end
+
+  def admin_book_update
+    @book = Book.find(params[:book_id])
+    @book.update(params[:book])
+
+    redirect_to admin_path(Admin.find(session[:admin_id]))
+  end
+
+
+
+
+
   protected
 
   def get_admin(admin_params)

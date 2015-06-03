@@ -9,6 +9,6 @@
       <li class="price"> <%=book.author %>   </li>
       <li class="description"> <%=book.genre %>  </li>
       <li class="bullet-item"> <%=book.checked_out? %>    </li>
-      <li class="cta-button"><a class="button" href="#">Buy Now</a></li>
+      <li class="cta-button"><a class="button" <%= link_to 'Book Details', admin_book_view_path(book) %> </a></li>
     </ul>
 <% end %>
