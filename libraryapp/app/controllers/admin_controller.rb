@@ -20,8 +20,6 @@ class AdminController < ApplicationController
 
   def create
     @admin = Admin.new(admin_params)
-
-
     if @admin.save
       session[:admin] = @admin.id
       redirect_to admin_path(@admin.id)
@@ -33,7 +31,6 @@ class AdminController < ApplicationController
   def show
     @admin = Admin.find(session[:admin_id])
     @books = Book.all
-
     @checkouts = @books.where(checked_out?: true)
   end
 

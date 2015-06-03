@@ -36,6 +36,7 @@ gem "non-stupid-digest-assets"
 gem 'whenever', :require => false
 # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
 gem 'foundation-rails'
+gem 'twilio-ruby'
 gem 'goodreads'
 
 

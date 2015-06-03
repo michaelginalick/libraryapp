@@ -33,9 +33,6 @@ class DashboardController < ApplicationController
   end
 
 
-
-
-
   protected
 
   def get_admin(admin_params)
