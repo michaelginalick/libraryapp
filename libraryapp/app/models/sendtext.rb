@@ -8,7 +8,7 @@ class SendText
 
 	def user_due_date
 		@users = User.all
-		@user_books = @users.books.where(checked_out?: true)
+		#@user_books = @users.books.where(checked_out?: true)
 		@user_due_date = @users.checkouts.where(due_date: get_date).pluck(:user_id, :book_id)		
 	end
 
