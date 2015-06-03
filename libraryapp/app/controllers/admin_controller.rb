@@ -33,6 +33,8 @@ class AdminController < ApplicationController
   def show
     @admin = Admin.find(session[:admin_id])
     @books = Book.all
+
+    @checkouts = @books.where(checked_out?: true)
   end
 
   def update
