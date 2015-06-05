@@ -1,6 +1,6 @@
 <div class="newBook">
   <div class="small-3 columns">
-  <%= form_for @book, url:{action: "admin"} do |f| %>
+  <%= form_for @book, :url => url_for(:controller => 'dashboard', :action => 'create') do |f| %>
     <p>
       <%= f.label :author %><br>
       <%= f.text_field :author %>

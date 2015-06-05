@@ -19,6 +19,8 @@ class BooksController < ApplicationController
     @user_checkouts = @user.books.where(id: @book.id, checked_out?: true).limit(1)
   end
 
+ 
+
   private
 
   def book_params

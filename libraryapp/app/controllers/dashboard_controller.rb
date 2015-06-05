@@ -6,6 +6,32 @@ class DashboardController < ApplicationController
     @book = Book.new
   end
 
+   def admin_add_book
+    @book = Book.new(book_params)
+    if @book.save
+      respond_to do |format|
+        format.html {redirect_to admin_index_path}
+        format.json {render :json => @book}
+      end
+    else
+      flash[:notice] = "Creation unsuccessful, please try again"
+      redirect_to admin_add_book
+    end
+  end
+
+   def create
+     @book = Book.new(book_params)
+    if @book.save
+      respond_to do |format|
+        format.html {redirect_to admin_index_path}
+        format.json {render :json => @book}
+      end
+    else
+      flash[:notice] = "Creation unsuccessful, please try again"
+      redirect_to admin_add_book
+    end
+  end
+
 
   def admin_login
     @admin = get_admin(params[:admin])
@@ -37,24 +63,17 @@ class DashboardController < ApplicationController
     redirect_to admin_path(Admin.find(session[:admin_id]))
   end
 
-  def admin_add_book
-    @book = Book.new(book_params)
-    if @book.save
-      respond_to do |format|
-        format.html {redirect_to admin_index_path}
-        format.json {render :json => @book}
-      end
-    else
-      flash[:notice] = "Creation unsuccessful, please try again"
-      redirect_to admin_add_book
-    end
-  end
+ 
  
 
   protected
 
   def get_admin(admin_params)
     Admin.find_by(email: admin_params[:email])
+  end
+
+  def book_params
+    params.require(:book).permit(:title, :author, :genre)
   end
 
 end
