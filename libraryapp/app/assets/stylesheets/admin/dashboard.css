@@ -1,0 +1,16 @@
+
+.addBook{
+	padding-left: 30px;
+	padding-right: 30px;
+	border-radius: 30px;
+}
+
+.newBook{
+	width: 1500px;
+    height: 300px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -150px;
+    margin-top: -150px;
+}

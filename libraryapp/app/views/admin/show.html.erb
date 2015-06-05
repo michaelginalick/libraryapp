@@ -1,5 +1,8 @@
 <p>Hello, <%=admin_user.email %></p>
 
+<div class="addBook">
+	<button class="button button-block round" /><%= link_to "Add!", admin_add_book_path %></button>
+</div>	
 
 
 <% @books.each do |book| %>

@@ -8,10 +8,12 @@ Rails.application.routes.draw do
   root 'session#index'
 
   resources :admin
-  post '/dashboard/admin_login' => 'dashboard#admin_login'
-  get '/dashboard/admin_logout' => 'dashboard#admin_logout'
-  get '/dashboard/admin_view/:book_id' => 'dashboard#admin_book_view', :as => 'admin_book_view'
-  patch '/dashboard/admin_update/:book_id' => 'dashboard#admin_book_update', :as => 'admin_book_update'
+    post '/dashboard/admin_login' => 'dashboard#admin_login'
+    get '/dashboard/admin_logout' => 'dashboard#admin_logout'
+    get '/dashboard/admin_view/:book_id' => 'dashboard#admin_book_view', :as => 'admin_book_view'
+    patch '/dashboard/admin_update/:book_id' => 'dashboard#admin_book_update', :as => 'admin_book_update'
+    get '/dashboard/admin_add_book' => 'dashboard#admin#admin_add_book', :as => 'admin_add_book'
+    post '/dashboard/admin_addnew_book' => 'dashboard#admin#admin_addnew_book', :as => 'admin_addnew_book'
 
 
 
