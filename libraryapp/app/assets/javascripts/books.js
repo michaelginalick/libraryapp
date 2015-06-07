@@ -17,13 +17,16 @@ $(document).ready(function(){
 	// 			console.log(data);
 	// 		}
 	// 	})
-	// }
+	// }	
 
 
-	$("#bookSearch").keyup(function() {
-		$.get($("#bookSearch").attr("action"), 
-		$("#bookSearch").serialize(), null, "script");
-		return false;  
+	$('#newBook').validate({
+		debug: true,
+		rules: {
+			'book[author]': {required: true},  //added this
+			'book[title]': {required: true},
+			'book[genre]': {required: true}
+		}
 	});
 });
 
