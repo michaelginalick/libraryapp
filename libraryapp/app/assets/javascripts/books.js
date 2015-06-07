@@ -20,7 +20,7 @@ $(document).ready(function(){
 	// }	
 
 
-	$('#newBook').validate({
+	$('#newBook > div').attr('new').validate({
 		debug: true,
 		rules: {
 			'book[author]': {required: true},  //added this

@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ui.all
+//= require jquery.validate.min.js
 //= require login
 //= require endless_scrolling
 //= require jquery-ui-1.8.2.custom.min.js
