@@ -4,7 +4,6 @@
 	<button class="button button-block round" /><%= link_to "Add!", admin_add_book_path %></button>
 </div>	
 
-
 <% @books.each do |book| %>
     <div class="pricing-table" ></div>
     <ul class="pricing-table">
@@ -15,3 +14,6 @@
       <li class="cta-button"><a class="button" <%= link_to 'Book Details', admin_book_view_path(book) %> </a></li>
     </ul>
 <% end %>
+
+
+<%= render partial: "current_checkouts" %>
