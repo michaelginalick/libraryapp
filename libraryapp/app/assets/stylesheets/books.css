@@ -35,18 +35,57 @@
 
 .checkout_button{
 	position: relative;
-	margin-top: 320px;
+	margin-top: 380px;
 	padding-left: 30px;
   padding-right: 30px;
 }
 
-.book_details{
+.book_details h5 {
+  font-family: "Roboto";
+  font-size: 2.5em;
+  line-height: 3.35em;
   position: relative;
-  height: 50px;
-  width: 350px;
+  height: 35px;
+  /*width: 1000px;*/
+  top: -3px;
+  left: 153px;
+  text-align: left;
+}
+
+.book_details h3  {
+  font-family: "Roboto";
+  font-size: 1.7em;
+  line-height: 3.35em;
+  position: relative;
+  height: 35px;
+  /*width: 1000px;*/
+  top: 20px;
+  left: 119px;
+  text-align: left;
+}
+.book_details h4 {
+  font-family: "Roboto";
+  font-size: 2.5em;
+  line-height: 3.35em;
+  position: relative;
+  height: 35px;
+  /*width: 1000px;*/
+  top: -3px;
+  left: 560px;
+  text-align: left;
+}
+
+.book_details p {
+  color: #778899;
+  font-family: "Roboto";
+  font-size: 2.5em;
+  line-height: 3.35em;
+  position: relative;
+  height: 35px;
+  /*width: 500px;*/
   top: 50px;
-  left: 0px;
-  text-align: center;
+  left: 20px;
+  text-align: left;
 }
 
 #bookSearch {
@@ -56,14 +95,49 @@
   margin-left: 50px;
 }
 
-.good_reads {
+
+.span_holder {
+  margin-left: 20px;
+  margin-top: 250px;
+}
+
+.ratings {
+  margin-top: -175px;
+  margin-left: 20px; 
+}
+
+.orange {
+  color: #f7be7a; 
+  font-size: 3.5em;
+  font-family: "Josefin Slab", serif;
+  line-height: 1.35em; 
+}
+
+.blue {
+  color: #67bde9; 
+  font-size: 3.5em;
+  font-family: "Josefin Slab", serif;
+  line-height: 1.35em; 
+}
+
+
+.purple {
+  color: #bd4de9; 
+  font-size: 3.5em;
+  font-family: "Josefin Slab", serif;
+  line-height: 1.35em; 
+}
+
+
+.good_reads p {
   font-family: "Roboto";
   font-size: 25px;
   line-height: 26px;
-  position: relative;
-  margin-top: 250px;
+  position: absolute;
+  margin-top: -40px;
   padding-left: 30px;
   padding-right: 30px;
+  text-indent: 210px;
 }
 
 .book {
@@ -73,4 +147,6 @@
 .pagination {
   visibility: hidden;
 }
+
+
 

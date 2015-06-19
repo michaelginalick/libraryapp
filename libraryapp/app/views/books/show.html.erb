@@ -4,26 +4,26 @@
 
 
 <div class ="book_details">
-  <h5> <%= @book.title  %> </h5>
-  <h5> <%= @book.author %> </h5>
-  <h5> <%= @book.genre  %> </h5>
-  <h5> <%= show_dates   %> </h5>
+  <p>Title:</p> <h5>  <%= @book.title  %> </h5>
+  <p>Author:</p> <h5> <%= @book.author %> </h5>
+  <p>Genre:</p> <h5>  <%= @book.genre  %> </h5>
+  <p>Info: </p>  <h3> <%= show_dates   %> </h3>
+  <p> This book has been checked out:</p> <h4> <%=@book_checkouts %> time(s) </h4>
 </div>
 
 <%= render partial: "checkouts" %>
 
+<div class="span_holder">
+  <span class="purple" id="syn">Synopsis:</span>
+</div>  
 
 <div class="good_reads">
-  
-<% good_reads_data(@book_id) %>
-<%= strip_tags(formatted_string) %>
-<br>
-<%= rating %>
-
+  <% good_reads_data(@book_id) %>
+  <p> <%= strip_tags(formatted_string) %> </p> <br>
+  <div class="ratings">
+    <span class="blue">Good Reads Rating: </span><span class="orange"> <%= rating %> </span>
+  </div>  
 </div>
-
-
-
 
 <div class="checkout_button">
   <% if @book.checked_out? == true %>
