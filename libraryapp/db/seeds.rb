@@ -8,9 +8,9 @@
 
   admin = Admin.create(email: "admin@gmail.com", password: "mag42c84")
 
-  user = User.create(email: "michael@gmail.com", username: "mag42c", password: "mag42c84", password_confirmation: "mag42c84")
-  user1 = User.create(email: "test@test.com", username: "mike", password: "mag42c84", password_confirmation: "mag42c84")
-  user3 = User.create(email: "tester@test.com", username: "jessie", password: "mag42c84", password_confirmation: "mag42c84")
+  user = User.create(email: "michael@gmail.com", username: "mag42c", phone: "3145461424", password: "mag42c84", password_confirmation: "mag42c84")
+  user1 = User.create(email: "test@test.com", username: "mike", phone: "3145461424", password: "mag42c84", password_confirmation: "mag42c84")
+  user3 = User.create(email: "tester@test.com", username: "jessie", phone: "3145461424", password: "mag42c84", password_confirmation: "mag42c84")
 
   book1 = Book.create(title: "Area 51", author: "Anne Jacobsen", genre: "non-fiction", good_reads_id: 11305364,checked_out?: false)
   book2 = Book.create(title: "The Corrections", author: "Jonathan Frazen", genre: "fiction", good_reads_id: 3805, checked_out?: false)

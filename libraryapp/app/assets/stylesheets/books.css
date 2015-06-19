@@ -58,10 +58,19 @@
 
 .good_reads {
   font-family: "Roboto";
-  font-size: 17px;
+  font-size: 25px;
   line-height: 26px;
   position: relative;
   margin-top: 250px;
   padding-left: 30px;
   padding-right: 30px;
 }
+
+.book {
+  margin-left: 40px;
+}
+
+.pagination {
+  visibility: hidden;
+}
+

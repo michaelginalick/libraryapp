@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessible :email, :username, :password, :phone, :password_digest
+  attr_accessible :email, :username, :password, :phone, :password_digest, :password_confirmation
 
   has_many :checkouts
   has_many :books, through: :checkouts
