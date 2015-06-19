@@ -34,10 +34,9 @@
 }
 
 .checkout_button{
-	position: relative;
-	margin-top: 380px;
-	padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 0px;
+  padding-right: 200px;
+  width: 75%;
 }
 
 .book_details h5 {
@@ -97,12 +96,13 @@
 
 
 .span_holder {
+  position: relative;
   margin-left: 20px;
   margin-top: 250px;
 }
 
 .ratings {
-  margin-top: -175px;
+  margin-top: -180px;
   margin-left: 20px; 
 }
 
@@ -122,14 +122,28 @@
 
 
 .purple {
-  color: #bd4de9; 
+  position: absolute;
+  color: #bd4de9;
   font-size: 3.5em;
   font-family: "Josefin Slab", serif;
-  line-height: 1.35em; 
+  line-height: 1.35em;
+  margin-left: 0px;
+  margin-top: -74px;
 }
 
 
 .good_reads p {
+ font-family: "Roboto";
+  font-size: 25px;
+  line-height: 26px;
+  margin-top: -5px;
+  padding-left: 30px;
+  padding-right: 30px;
+  text-indent: 195px;
+}
+
+.good_reads {
+  position: relative;
   font-family: "Roboto";
   font-size: 25px;
   line-height: 26px;
