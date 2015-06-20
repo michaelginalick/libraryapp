@@ -16,9 +16,10 @@
 
 .dropdown_checkout {
   position: absolute;
-  top: 190px;
-  right: 252px;
-  margin-right: 548px;
+  top: 120px;
+  right: 25px;
+  /* margin-right: 548px; */
+  font-size: 2.3em;
 }
 
 
