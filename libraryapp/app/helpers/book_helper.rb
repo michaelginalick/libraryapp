@@ -1,5 +1,3 @@
-
-
 module BookHelper
 
 	def start_date

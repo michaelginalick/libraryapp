@@ -1,26 +1,9 @@
-/*// Place all the styles related to the Books controller here.*/
-/*// They will automatically be included in application.css.*/
-/*// You can use Sass (SCSS) here: http://sass-lang.com/*/
-
-
-/*.book {
-    width: 300px;
-    height: 300px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    margin-left: -150px;
-    margin-top: -150px;
-}*/
-
 .one_book {
-
   max-width: 260px;
   max-height: 342px;
   position: absolute;
   top: 245px;
   left: 30px;
-
 }
 
 .user_name {
@@ -30,7 +13,6 @@
     top: 30px;
     left: 0px;
     text-align: center;
-
 }
 
 .checkout_button{
@@ -45,7 +27,6 @@
   line-height: 3.35em;
   position: relative;
   height: 35px;
-  /*width: 1000px;*/
   top: -3px;
   left: 153px;
   text-align: left;
@@ -57,7 +38,6 @@
   line-height: 3.35em;
   position: relative;
   height: 35px;
-  /*width: 1000px;*/
   top: 20px;
   left: 119px;
   text-align: left;
@@ -68,7 +48,6 @@
   line-height: 3.35em;
   position: relative;
   height: 35px;
-  /*width: 1000px;*/
   top: -3px;
   left: 560px;
   text-align: left;
@@ -81,7 +60,6 @@
   line-height: 3.35em;
   position: relative;
   height: 35px;
-  /*width: 500px;*/
   top: 50px;
   left: 20px;
   text-align: left;
@@ -92,6 +70,7 @@
   width: 90%;
   box-sizing: border-box;
   margin-left: 50px;
+  margin-top: 50px;
 }
 
 
@@ -130,7 +109,6 @@
   margin-left: 0px;
   margin-top: -74px;
 }
-
 
 .good_reads p {
  font-family: "Roboto";

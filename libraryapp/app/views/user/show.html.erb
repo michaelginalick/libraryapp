@@ -12,10 +12,17 @@
 
 
 
-<div>		
-	<% @user_checkout_history.each do |history| %>
-		<li> <%= history.title %> </li>
-	<%end%>	
+<div class="dropdown_checkout">		
+    <a href="#" class="button success" data-options="align:right" data-dropdown="drop">Your Checkouts &raquo;</a>
+      <ul id="drop" class="large f-dropdown" data-dropdown-content>
+        <% if @user_checkout_history.length == 0 %>
+          <li>You need to read more!! </li>
+        <%else%>
+          <% @user_checkout_history.each do |history| %>
+            <li><%= link_to 'View Details', book_path(history.id) %><strong><%= history.title %></strong></li>
+          <%end%>
+        <%end%>  
+      </ul>
 </div>
 
 
