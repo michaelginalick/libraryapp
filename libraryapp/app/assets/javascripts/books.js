@@ -1,32 +1,36 @@
 $(document).ready(function(){
 
 
+function DropDown(el) {
+    this.dd = el;
+    this.placeholder = this.dd.children('span');
+    this.opts = this.dd.find('ul.dropdown > li');
+    this.val = '';
+    this.index = -1;
+    this.initEvents();
+}
+DropDown.prototype = {
+    initEvents : function() {
+        var obj = this;
 
-		// // $("#bookSearch").on('keyup', function(e){
-		// // 	e.preventDefault();
-		// // 	bookSearch();
-		// // });
+        obj.dd.on('click', function(event){
+            $(this).toggleClass('active');
+            return false;
+        });
 
-
-
-		// // var bookSearch = function(){
-		// // 	$.ajax({
-		// // 		url: "/books/",
-		// // 		type: "GET",
-		// // 		success: function(data){
-		// // 			console.log(data);
-		// // 		}
-		// // 	})
-		// // }	
-
-
-		// $('#newBook > div').attr('new').validate({
-		// 	debug: true,
-		// 	rules: {
-		// 		'book[author]': {required: true},  //added this
-		// 		'book[title]': {required: true},
-		// 		'book[genre]': {required: true}
-		// 	}
-		// });
+        obj.opts.on('click',function(){
+            var opt = $(this);
+            obj.val = opt.text();
+            obj.index = opt.index();
+            obj.placeholder.text('Gender: ' + obj.val);
+        });
+    },
+    getValue : function() {
+        return this.val;
+    },
+    getIndex : function() {
+        return this.index;
+    }
+}
 });
 
