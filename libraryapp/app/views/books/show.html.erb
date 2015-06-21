@@ -1,5 +1,5 @@
-<div class="user_name">
-  <%= @user.email %>
+<div id="header-wrap">
+  <li>Hello, <%=current_user.username%></li>
 </div>
 
 
@@ -26,12 +26,12 @@
   <div class="checkout_button">
   <% if @book.checked_out? == true %>
       <% if @user_checkouts.length > 0 %>
-        <button class="button button-block" /> <%= link_to "Checkin",checkin_path(@book) %></button>
+        <button class="button button-block" /><a class="button" <%= link_to "Checkin",checkin_path(@book) %></button>
       <%else %>
         <button class="button button-block"  disabled />This book is currently checked out</button>
       <%end%> 
   <%else%>
-    <button class="button button-block" /> <%= link_to "Checkout",checkout_path(@book) %></button>
+    <button class="button button-block"><a class="button" <%= link_to 'Checkout', checkout_path(@book) %></button>
   <%end%>
   </div>  
 </div>
