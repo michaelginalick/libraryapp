@@ -16,13 +16,13 @@
 
 
 <div class="dropdown_checkout">
-  <a href="#" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000">Your Checkout History</a>
+  <a href="#" data-dropdown="hover1" data-options="is_hover:true; hover_timeout:5000">Your Checkout History</a> 
   <ul id="hover1" class="f-dropdown" data-dropdown-content>
     <% if @user_checkout_history.length == 0 %>
       <li>You need to read more!! </li>
     <%else%>
       <% @user_checkout_history.each do |history| %>
-      <li><%= link_to 'View Details', book_path(history.id) %><strong><%= history.title %></strong></li>
+      <li><%= link_to '', book_path(history.id) %><strong><%= history.title %></strong></li>
       <%end%>
     <%end%> 
     </ul>

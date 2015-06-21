@@ -21,6 +21,6 @@
 
 
 
-every :day, :at => '12:30am' do
-	runner "Task.find_due_date_send_text"
+every :day, :at => '12:30pm' do
+	runner "SendText.sms_text"
 end
