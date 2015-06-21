@@ -13,35 +13,22 @@
    <%= javascript_include_tag 'autocomplete-rails.js' %>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div id="header-wrap">
-    <% if logged_in? %>
-        <a href="/session/logout"><p>Logout</p></a>
-    <%end%>
-
-    <% if admin_logged_in? %>
-        <a href="/dashboard/admin_logout"><p>Logout</p></a>
-    <% end %>
   
-  </div>
 
-
-  
 </head>
 <body>
 
-  <div class="logout">
 
-    <% if logged_in? %>
-        <a href="/session/logout"><p>Logout</p></a>
-    <%end%>
+    <div id="header-wrap">
+      <% if logged_in? %>
+          <a href="/session/logout">Logout</a>
+      <%end%>
 
-    <% if admin_logged_in? %>
-        <a href="/dashboard/admin_logout"><p>Logout</p></a>
-    <% end %>
+      <% if admin_logged_in? %>
+          <a href="/dashboard/admin_logout">Logout</a>
+      <% end %>
     </div>
 
     <%= yield %>
-
-
 </body>
 </html>

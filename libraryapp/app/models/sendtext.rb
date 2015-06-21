@@ -25,8 +25,8 @@ class SendText
 	    # Instantiate a Twilio client
 	 	client = Twilio::REST::Client.new(sid, token)
 	 	from = ENV["FROM"]
-
-	 	@user_due_date.each do |i|
+	 	#loop through objects and get userphone and book
+	 	user_due_date.each do |i|
 	 		i.each do |info|
 	 			user = User.find(info)
 	 			book = Book.find(info)
