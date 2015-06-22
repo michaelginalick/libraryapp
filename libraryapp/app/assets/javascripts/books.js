@@ -1,17 +1,12 @@
 $(document).ready(function(){
-
-
-
+	
 		$("#bookSearch").on('keyup', function(e){
 			e.preventDefault();
 			var searchContent = $('#bookSearch').val();
 			bookSearch(searchContent);
 		});
 
-
-
 		var bookSearch = function(searchContent){
-			//console.log('called');
 			$.ajax({
 				url: "/books/",
 				data: {
@@ -19,18 +14,11 @@ $(document).ready(function(){
 				},
 				type: "GET",
 				success: function(data){
-					console.log(data);
+					$("#books").empty();
+					var jqObj = data;
+					var searchResults = $(jqObj).find(".book");
+					$("#books").append(searchResults);
 				}
 			})
 		}	
-
-
-		// $('#newBook > div').attr('new').validate({
-		// 	debug: true,
-		// 	rules: {
-		// 		'book[author]': {required: true},  //added this
-		// 		'book[title]': {required: true},
-		// 		'book[genre]': {required: true}
-		// 	}
-		// });
 });
