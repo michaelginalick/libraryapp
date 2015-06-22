@@ -5,14 +5,14 @@ class Book < ActiveRecord::Base
   has_many :checkins
   has_many :users
 
-  
 
-	def self.search(search)
-		if search
-			where('title || author || genre LIKE ?', "%#{search}%")
-		else
-			all
-		end
-	end
-	
+
+  def self.search(search)
+    if search
+      where('title || author || genre LIKE ?', "%#{search}%")
+    else
+      all
+    end
+  end
+
 end

@@ -1,10 +1,5 @@
-
-
 class BooksController < ApplicationController
-
   #book needs full crud functionality via the admin, not the user
-
-
   def index
     @user = User.find(session[:user_id])
     @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
@@ -20,7 +15,7 @@ class BooksController < ApplicationController
     @user_checkouts = @user.books.where(id: @book.id, checked_out?: true).limit(1)
   end
 
- 
+
 
   private
 

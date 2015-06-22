@@ -2,7 +2,7 @@ class AdminController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
 
-# as an admin
+  # as an admin
   # I want to be able to add a book
   # I want to be able to edit a book
   # I want to be able to delete a book

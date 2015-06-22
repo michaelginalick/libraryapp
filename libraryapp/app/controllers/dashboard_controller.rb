@@ -6,7 +6,7 @@ class DashboardController < ApplicationController
     @book = Book.new
   end
 
-   def admin_add_book
+  def admin_add_book
     @book = Book.new(book_params)
     if @book.save
       respond_to do |format|
@@ -19,8 +19,8 @@ class DashboardController < ApplicationController
     end
   end
 
-   def create
-     @book = Book.new(book_params)
+  def create
+    @book = Book.new(book_params)
     if @book.save
       respond_to do |format|
         format.html {redirect_to admin_index_path}
@@ -63,8 +63,8 @@ class DashboardController < ApplicationController
     redirect_to admin_path(Admin.find(session[:admin_id]))
   end
 
- 
- 
+
+
 
   protected
 
@@ -77,5 +77,3 @@ class DashboardController < ApplicationController
   end
 
 end
-
-
