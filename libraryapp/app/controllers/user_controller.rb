@@ -3,6 +3,7 @@ class UserController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
+
     if session[:user_id] != nil
       @user = User.find(session[:user_id])
       @user_checkouts = @user.books.where(checked_out?: true)

@@ -7,6 +7,13 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'session#index'
 
+    resources :user
+  #sessions routes
+  get '/session/index' => 'session#index'
+  post '/session/login' => 'session#login'
+  get '/session/logout' => 'session#logout', :as => 'logout'
+
+
   resources :admin
   post '/dashboard/admin_login' => 'dashboard#admin_login'
   get '/dashboard/admin_logout' => 'dashboard#admin_logout'
@@ -19,10 +26,6 @@ Rails.application.routes.draw do
 
 
 
-  resources :user
-  #sessions routes
-  post '/session/login' => 'session#login'
-  get '/session/logout' => 'session#logout', :as => 'logout'
 
 
 
