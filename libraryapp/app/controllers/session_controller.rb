@@ -3,12 +3,10 @@ class SessionController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     redirect_to user_path(User.find(session[:user_id])) if session[:user_id] != nil
   end
 
   def login
-    p "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
     @user = get_user(params[:user])
     if @user && @user.authenticate(params[:user][:password])
       session[:user_id] = @user.id
