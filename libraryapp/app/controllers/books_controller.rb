@@ -2,8 +2,13 @@ class BooksController < ApplicationController
   #book needs full crud functionality via the admin, not the user
   def index
     @user = User.find(session[:user_id])
-    @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
-    @user_search = Book.search(params[:search])
+
+    if params[:search]
+      @user_search = Book.search(params[:search])
+    else
+      @books = Book.search(params[:search]).paginate(:page => params[:page], :per_page => 20)
+    end
+    
     @user_checkouts = @user.checkouts
   end
 

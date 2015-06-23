@@ -1,8 +1,7 @@
-<p>Hello, <%=current_user.username%></p>
+<div id="header-wrap">
+  <li>Hello, <%=current_user.username%></li>
+</div>
 
-
- 
- <!-- <input type="text" autofocus id="newTodoItem" placeholder="Search by Title, Author, Genre"></input> -->
 
 
 <%= form_tag books_path, method: "get" do %>
@@ -13,10 +12,14 @@
 
 
 <div id="books">
-  <%= render @books %>
+  <% if @user_search %>
+  	<%= render @user_search %>
+  <%else%>
+  	<%= will_paginate @books %>
+  <%end%>
 </div>
 
-<%= will_paginate @books %>
+
 
 
 
