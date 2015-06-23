@@ -14,10 +14,9 @@ $(document).ready(function(){
 				},
 				type: "GET",
 				success: function(data){
-					$("#books").empty();
 					var jqObj = data;
 					var searchResults = $(jqObj).find(".book");
-					$("#books").append(searchResults);
+					$("#books").empty().append(searchResults);
 				}
 			})
 		}	
