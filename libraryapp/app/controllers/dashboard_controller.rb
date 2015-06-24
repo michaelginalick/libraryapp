@@ -63,6 +63,9 @@ class DashboardController < ApplicationController
     redirect_to admin_path(Admin.find(session[:admin_id]))
   end
 
+  def admin_book
+  end
+
 
 
 

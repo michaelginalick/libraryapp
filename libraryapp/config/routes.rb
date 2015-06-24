@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   patch '/dashboard/admin_update/:book_id' => 'dashboard#admin_book_update', :as => 'admin_book_update'
   get '/dashboard/admin_add_book' => 'dashboard#admin#admin_add_book', :as => 'admin_add_book'
   post 'dashboard/create' => 'dashboard#create', :as => 'create_book'
+  get 'dashboard/admin_book/:checkout_id' => 'dashboard#admin_book', :as => 'view_checkedout_book'
 
 
 
