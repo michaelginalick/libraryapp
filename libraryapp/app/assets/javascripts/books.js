@@ -23,14 +23,3 @@ $(document).ready(function(){
 			})
 		}	
 });
-
-
-// ajaxRequests = new Array();
-
-// queueRequest = function(whatever, you, want) {
-//     if(ajaxRequests[ajaxRequests.length - 1]) {
-//         ajaxRequests[ajaxRequests.length - 1].abort();
-//     }
-
-//     ajaxRequests[ajaxRequests.length] = //Insert New jQuery AJAX call here.
-// }
