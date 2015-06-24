@@ -3,5 +3,4 @@
 
 <%= form_for(@book, :url => {:action => 'admin_book_update', :id => @book.id}) do |f| %>
 	<%= render(:partial => "edit", :locals => {:f => f}) %>  
-	<li class="cta-button"><a class="button">           <%= submit_tag("Update Book!") %> </a></li>
 <% end %>

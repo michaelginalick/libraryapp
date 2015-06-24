@@ -30,8 +30,8 @@ class AdminController < ApplicationController
 
   def show
     @admin = Admin.find(session[:admin_id])
-    @books = Book.all
-    @current_checkouts = @books.where(checked_out?: true)
+    @books = Book.all.length
+    @current_checkouts = Book.where(checked_out?: true)
   end
 
   def update
