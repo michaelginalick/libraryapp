@@ -64,10 +64,13 @@ class DashboardController < ApplicationController
   end
 
   def admin_book
+    @checkout = Checkout.find(params[:checkout_id])
+    book = @checkout.book_id
+    user = @checkout.user_id
+    @book = Book.find(book)
+    @user = User.find(user)  
   end
-
-
-
+                          
 
   protected
 

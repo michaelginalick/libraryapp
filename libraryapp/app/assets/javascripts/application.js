@@ -14,6 +14,7 @@
 //= require jquery_ujs
 //= require jquery.ui.all
 //= require login
+//= require admin
 //= require endless_scrolling
 //= require foundation
 //= require_tree .

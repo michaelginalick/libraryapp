@@ -5,7 +5,7 @@
           <li>There are no books checkedout</li>
         <%else%>
           <% @current_checkouts.each do |checkout| %>
-            <li><%= link_to 'View Details', view_checkedout_book_path(checkout.id) %><strong><%= checkout.title %></strong></li>
+            <li id="checkout_id"><%= link_to 'View Details', view_checkedout_book_path(checkout.id), :"data-href" => checkout.id %><strong><%= checkout.title %></strong></li>
           <%end%>
         <%end%>  
       </ul>
