@@ -50,8 +50,6 @@ class DashboardController < ApplicationController
     redirect_to root_path
   end
 
-
-
   def admin_book_view
     @book = Book.find(params[:book_id])
   end
@@ -68,7 +66,11 @@ class DashboardController < ApplicationController
     book = @checkout.book_id
     user = @checkout.user_id
     @book = Book.find(book)
-    @user = User.find(user)  
+    @user = User.find(user)
+  end
+
+  def view_all
+    @books = Book.all
   end
                           
 

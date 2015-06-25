@@ -2,14 +2,9 @@
   <li>Hello, <%=current_user.username%></li>
 </div>
 
-
-
 <%= form_tag books_path, method: "get" do %>
   <%= text_field_tag :search, params[:search], :autofocus => true, :placeholder => "Search by Title, Author, Genre", :id => "bookSearch" %>
 <% end %>
-
-
-
 
 <div id="books">
   <% if @user_search %>
@@ -18,10 +13,6 @@
   	<%= will_paginate @books %>
   <%end%>
 </div>
-
-
-
-
 
 <div class="dropdown">
   <a data-dropdown="drop1" class="button success" aria-controls="drop1" aria-expanded="false">Your Books</a>

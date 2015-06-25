@@ -29,6 +29,7 @@ class AdminController < ApplicationController
   end
 
   def show
+    @search_book = Book.search(params[:search]).paginate(:per_page => 10, :page => params[:page])
     @admin = Admin.find(session[:admin_id])
     @books = Book.all.length
     @current_checkouts = Book.where(checked_out?: true)
@@ -51,6 +52,8 @@ class AdminController < ApplicationController
   def new_book
     @book = Book.create(params[:book])
   end
+
+ 
 
 
 

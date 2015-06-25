@@ -22,6 +22,7 @@ Rails.application.routes.draw do
   get '/dashboard/admin_add_book' => 'dashboard#admin#admin_add_book', :as => 'admin_add_book'
   post 'dashboard/create' => 'dashboard#create', :as => 'create_book'
   get 'dashboard/admin_book/:checkout_id' => 'dashboard#admin_book', :as => 'view_checkedout_book'
+  get 'dashboard/view_all' => 'dashboard#view_all', :as => 'view_all'
 
 
 
